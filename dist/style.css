@@ -449,7 +449,8 @@ a {
   }
 
   .about__wrap {
-    background-size: cover;
+    background-size: contain;
+    background-position: right;
   }
 
   .email__wrap {
