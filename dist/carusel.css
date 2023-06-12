@@ -66,7 +66,6 @@
 .cCarousel-item {
     width: 250px;
     height: 365px;
-    /* border: 2px solid white; */
     border-radius: 15px;
     overflow: hidden;
     display: flex;
@@ -99,6 +98,17 @@
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+
+@media (max-width: 400px) {
+    .cCarousel-item img {
+        width: 100%;
+        object-fit: none;
+        min-height: 150px;
+        color: white;
+    }
 }
 
 @media (max-width: 900px) {

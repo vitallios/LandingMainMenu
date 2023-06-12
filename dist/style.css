@@ -50,6 +50,7 @@ li {
 a {
   text-decoration: none;
   color: var(--light-color);
+  cursor: pointer;
 }
 
 .none {
@@ -60,11 +61,28 @@ a {
   display: flex;
 }
 
+li svg {
+  cursor: pointer;
+}
+
 .container {
   width: 80%;
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.hidden {
+  overflow: hidden;
+  position: fixed;
+}
+
+.btnTop {
+  position: fixed;
+  width: 5%;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
 }
 
 .header__wrap {
@@ -103,6 +121,19 @@ a {
   transition: 0.6s;
   fill: var(--color-akcent);
   cursor: pointer;
+}
+
+.mobailNav__contacts {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin-top: 2%;
+}
+
+.mobailNav__contacts-item svg {
+  fill: var(--light-color);
 }
 
 .menu-btn {
@@ -156,12 +187,78 @@ a {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000000d6;
+  min-height: 100vh;
+  z-index: 99;
+}
+.modal__wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .modal__wrap {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+.modal__close {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  fill: var(--light-color);
+  background: none;
+}
+.modal__close svg {
+  width: 60px;
+  fill: var(--light-color);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .modal__close {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    fill: var(--light-color);
+    background: none;
+  }
+  .modal__close svg {
+    width: 60px;
+    fill: var(--light-color);
+    cursor: pointer;
+  }
+}
+.modalEmail {
+  cursor: pointer;
+}
+
+.about__wrap img.k1__legttop {
+  position: absolute;
+  top: -4%;
+  left: -8%;
+  transform: rotate(10deg);
+}
+
 .about {
   width: 100%;
   height: 100%;
   padding-bottom: 100px;
 }
 .about__wrap {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   background-image: url(./../assets/img/about-bg.png);
@@ -185,6 +282,11 @@ a {
   font-family: "MontserratAlternatesBold", "Arial", sans-serif;
   margin-top: 30px;
   border-radius: 50px;
+  transition: 0.4s;
+}
+.about__head-btn:hover {
+  transition: 0.4s;
+  background-color: var(--night-akcent);
 }
 .about__body {
   margin: 60px 0;
@@ -231,9 +333,14 @@ a {
   align-items: center;
   display: flex;
   padding: 10px;
+  transition: 0.4s;
 }
 .about__body-my__about-blok p {
   font-size: 24px;
+}
+.about__body-my__about-blok:hover {
+  transition: 0.4s;
+  box-shadow: 0px 0px 30px var(--color-akcent);
 }
 @media (max-width: 800px) {
   .about__body-my__about-blok {
@@ -244,6 +351,42 @@ a {
   .about__body-my__about-blok {
     min-width: 100%;
   }
+}
+
+.partners__wrap img {
+  position: absolute;
+  z-index: -1;
+}
+
+.partners__wrap img.k1__left {
+  left: -5%;
+  bottom: 8%;
+}
+
+.partners__wrap img.k2__left {
+  left: -8%;
+  top: 8%;
+}
+
+.partners__wrap img.bludo {
+  right: -5%;
+  bottom: -8%;
+}
+
+.partners__wrap img.k1__right {
+  right: -5%;
+  bottom: 8%;
+  transform: rotate(195deg);
+}
+
+.partners__wrap img.l2__right {
+  right: 5%;
+  top: 5%;
+}
+
+.partners {
+  position: relative;
+  overflow: hidden;
 }
 .partners__item__right {
   justify-content: flex-end;
@@ -276,9 +419,16 @@ a {
   text-align: center;
 }
 
+.run__str img.l2__left {
+  position: absolute;
+  top: -27%;
+  left: -7%;
+}
+
 .run__str {
   background-color: #B42D01;
   padding: 30px 0;
+  position: relative;
 }
 .run__str-title {
   margin: 0 auto;
@@ -326,9 +476,17 @@ a {
   }
 }
 
+.email__wrap img.l1__right {
+  position: absolute;
+  right: -2%;
+  top: 0;
+}
+
 .email__wrap {
   background-image: url(./../assets/img/email-bg.png);
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 .email__body {
   display: flex;
@@ -381,6 +539,12 @@ a {
   color: var(--light-color);
   padding: 20px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.email__form-btn:hover {
+  background-color: var(--night-akcent);
+  transition: 0.4s;
 }
 .email__contant {
   width: 45%;
@@ -398,14 +562,28 @@ a {
   width: 90%;
 }
 
+.footer img.k1__bottomright {
+  position: absolute;
+  right: 0;
+  top: -12%;
+  transform: rotate(295deg);
+}
+
 .footer {
   background-color: #200600;
   padding: 30px 0;
+  position: relative;
+  overflow: hidden;
 }
 .footer__wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 900px) {
+  .footer__logo svg {
+    width: 100%;
+  }
 }
 .footer__contacts {
   display: flex;
@@ -449,8 +627,7 @@ a {
   }
 
   .about__wrap {
-    background-size: contain;
-    background-position: right;
+    background-size: cover;
   }
 
   .email__wrap {
@@ -472,6 +649,46 @@ a {
   }
 }
 @media (max-width: 900px) {
+  .about__wrap img.k1__legttop {
+    width: 30%;
+    top: -9%;
+  }
+
+  .partners__wrap img.k2__left {
+    left: -15%;
+    top: -7%;
+  }
+
+  .partners__wrap img.l2__right {
+    right: 4%;
+    top: 0%;
+    transform: rotate(119deg);
+    width: 20%;
+  }
+
+  .partners__wrap img.k1__right {
+    right: -9%;
+    bottom: 7%;
+    transform: rotate(195deg);
+  }
+
+  .partners__wrap img.k1__left {
+    left: -9%;
+    bottom: 25%;
+  }
+
+  .run__str img.l2__left {
+    position: absolute;
+    top: 8%;
+    left: -12%;
+  }
+
+  .email__wrap img.l1__right {
+    position: absolute;
+    right: -7%;
+    top: 40%;
+  }
+
   .mobailMenu {
     position: fixed;
     left: -80%;
@@ -479,8 +696,9 @@ a {
     bottom: 0;
     height: 100vh;
     width: 70%;
-    background: #1c1c1ced;
+    background: #000000f7;
     display: block;
+    z-index: 99;
   }
   .mobailMenu__wrap {
     display: flex;
@@ -568,6 +786,56 @@ a {
   }
 }
 @media (max-width: 500px) {
+  .btnTop {
+    width: 15%;
+  }
+
+  .partners__wrap img.k2__left {
+    left: -30%;
+    top: -18%;
+  }
+
+  .partners__wrap img.k1__right {
+    right: -30%;
+  }
+
+  .partners__wrap img.k1__left {
+    left: -33%;
+  }
+
+  .partners__wrap img.l2__right {
+    top: 3%;
+    width: 30%;
+  }
+
+  .partners__wrap img.bludo {
+    right: -20%;
+    bottom: -10%;
+    width: 75%;
+  }
+
+  .run__str img.l2__left {
+    display: none;
+  }
+
+  .email__wrap img.l1__right {
+    position: absolute;
+    right: -20%;
+    top: 35%;
+    width: 35%;
+  }
+
+  .footer img.k1__bottomright {
+    position: absolute;
+    right: -35%;
+    top: 30%;
+    transform: rotate(295deg);
+  }
+
+  .mobailMenu__menu-item a {
+    font-size: 26px;
+  }
+
   .container {
     width: 90%;
   }
