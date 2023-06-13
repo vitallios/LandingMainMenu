@@ -3,7 +3,6 @@
 var menuBtn = document.querySelector('.menu-btn');
 var mobailMenu = document.querySelector('.mobailMenu');
 var btnTop = document.querySelector('.btnTop');
-console.log(btnTop);
 var prev = document.querySelector("#prev");
 var next = document.querySelector("#next");
 var carouselVp = document.querySelector("#carousel-vp");
@@ -29,7 +28,7 @@ var closeMenu = function closeMenu() {
   mobailMenu.style.left = '-80%';
 };
 
-console.dir(window.outerHeight); // menu burger
+// menu burger
 
 menuBtn.addEventListener('click', function () {
   if (!menuOpen) {
