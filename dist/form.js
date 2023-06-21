@@ -19,6 +19,7 @@ jQuery(document).ready(function(){
         });
 
         window.location.pathname = '/blagodar.html';
+console.log(window.location.pathname)
 
         forms[0].reset()
         forms[1].reset()
