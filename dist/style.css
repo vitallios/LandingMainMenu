@@ -581,11 +581,6 @@ li svg {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media (max-width: 900px) {
-  .footer__logo svg {
-    width: 100%;
-  }
-}
 .footer__contacts {
   display: flex;
   justify-content: flex-start;
@@ -614,7 +609,6 @@ li svg {
   fill: var(--color-akcent);
   transition: 0.6s;
 }
-
 
 
 
@@ -660,6 +654,11 @@ font-size: 1.7em;
 }
 
 
+@media (max-width: 900px) {
+  .footer__logo svg {
+    width: 100%;
+  }
+}
 @media (min-width: 900px) {
   .about__head {
     width: 70%;
@@ -873,10 +872,9 @@ font-size: 1.7em;
 
   .footer img.k1__bottomright {
     position: absolute;
-    right: -25%;
-    top: 50%;
+    right: -35%;
+    top: 30%;
     transform: rotate(295deg);
-    width: 50%;
   }
 
   .mobailMenu__menu-item a {

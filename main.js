@@ -1,6 +1,7 @@
 const menuBtn = document.querySelector('.menu-btn');
 const mobailMenu = document.querySelector('.mobailMenu')
 const btnTop = document.querySelector('.btnTop')
+// console.log(btnTop);
 
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
@@ -27,6 +28,7 @@ const closeMenu = () => {
   mobailMenu.style.left = '-80%'
 }
                                           
+console.dir(window.outerHeight);
 
 // menu burger
 menuBtn.addEventListener('click', () => {
@@ -118,3 +120,6 @@ function mediaManagement() {
     oldViewportWidth = newViewportWidth;
   }
 }
+
+
+

@@ -8,22 +8,20 @@ jQuery(document).ready(function(){
 			type: "POST", // Метод отправки
 			url: "sendform.php", // Путь к PHP обработчику sendform.php
 			data: form_data,
-/*
-			success: swal({
-				title: "Спасибо за заявку!",
-                type: "success",
-                showConfirmButton: false,
-                timer: 2000,
-            }),
-*/
+			// success: swal({
+			// 	title: "Спасибо за заявку!",
+      //           type: "success",
+      //           showConfirmButton: false,
+      //           timer: 2000,
+      //       }),
         });
 
+        console.log(window.location.pathname);
         window.location.pathname = '/blagodar.html';
-console.log(window.location.pathname)
-
+        
         forms[0].reset()
         forms[1].reset()
-        
+       
         modalEmail.classList.add('none');
         menuBtn.classList.remove('open');               
         menuOpen=false;
@@ -49,3 +47,7 @@ btn.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({scrollTop:0}, '300');
 });
+
+
+
+
