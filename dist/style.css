@@ -828,9 +828,10 @@ li svg {
 
   .footer img.k1__bottomright {
     position: absolute;
-    right: -35%;
-    top: 30%;
+    right: -25%;
+    top: 50%;
     transform: rotate(295deg);
+    width: 50%;
   }
 
   .mobailMenu__menu-item a {
