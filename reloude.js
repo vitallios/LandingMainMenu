@@ -19,7 +19,7 @@ function countdown() {
 
 
 
-
+        console.log(window.location.pathname);
 
 
  setTimeout(()=>{
