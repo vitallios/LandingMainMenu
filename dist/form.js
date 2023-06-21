@@ -8,13 +8,17 @@ jQuery(document).ready(function(){
 			type: "POST", // Метод отправки
 			url: "sendform.php", // Путь к PHP обработчику sendform.php
 			data: form_data,
+/*
 			success: swal({
 				title: "Спасибо за заявку!",
                 type: "success",
                 showConfirmButton: false,
                 timer: 2000,
             }),
+*/
         });
+
+        window.location.pathname = '/blagodar.html';
 
         forms[0].reset()
         forms[1].reset()
