@@ -104,10 +104,11 @@
 
 @media (max-width: 400px) {
     .cCarousel-item img {
-        width: 100%;
+        width: 200px;
         object-fit: none;
-        min-height: 150px;
+        min-height: 200px;
         color: white;
+        margin: 0 auto;
     }
 }
 

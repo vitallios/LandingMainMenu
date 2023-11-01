@@ -66,6 +66,16 @@ next.addEventListener("click", function () {
   if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
     leftValue -= totalMovementSize;
     cCarouselInner.style.left = leftValue + "px";
+    console.log(leftValue);
+    if (window.innerWidth > 899 && leftValue < '-1010') {
+      leftValue = 0;
+    }
+    if (window.innerWidth > 750 && leftValue < '-1050') {
+      leftValue = 0;
+    }
+    if (window.innerWidth > 300 && leftValue < '-1300') {
+      leftValue = 0;
+    }
   }
 });
 var mediaQuery510 = window.matchMedia("(max-width: 300px)");
@@ -87,3 +97,5 @@ function mediaManagement() {
     oldViewportWidth = newViewportWidth;
   }
 }
+
+

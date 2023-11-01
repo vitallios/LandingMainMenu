@@ -1,0 +1,261 @@
+.menu__wrap{
+  position: relative;
+    background-image: url('./../assets/img/about-bg.png');
+    display: block;
+  width: 100%;
+  min-height: 45em;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.menu__weeks,
+.menu__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+
+
+
+.menu__week-item > button,
+.menu__list-item > button{
+    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    background: #ffffff14;
+    border-radius: 15px;
+    transition: background .4s;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.menu__week-item > button:hover,
+.menu__list-item > button:hover{
+    background: #ffffff50;
+}
+
+
+.gred{
+  display: flex;
+  width: auto;
+  height: 100%;
+  gap: 5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5vh 0;
+  min-height: 50em;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+
+.menu__product-list> li{
+  width: 200px;
+}
+.menu__product-list> li > button > img{
+  width: 100%;
+}
+
+.card__text{
+  width: 100%;
+  overflow: hidden;
+  height: 20px;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  white-space: inherit;
+}
+.card__text > h2{
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+.card{
+  background: none;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1em;
+  min-height: 240px;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  
+}
+
+.card:hover > .card__text{
+  padding: 2%;
+  background: #000000e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 5em;
+  padding: 2%;
+  display: flex;
+  border-radius: 0 0 10px 10px;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -ms-transition: all .6s;
+  -o-transition: all .6s;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -ms-border-radius: 0 0 10px 10px;
+  -o-border-radius: 0 0 10px 10px;
+}
+
+.menu__week-item > button.active,
+.menu__list-item > button.active{
+  background: #fff;
+  color: #000;
+}
+
+
+.k1__legttop{
+  position: absolute;
+  top: -10%;
+  left: -5%;
+}
+
+.k1__left {
+  position: absolute;
+  left: -5%;
+  bottom: -8%;
+}
+.k1__right {
+  position: absolute;
+  right: -5%;
+  bottom: 12%;
+  transform: rotate(195deg);
+  -webkit-transform: rotate(195deg);
+  -moz-transform: rotate(195deg);
+  -ms-transform: rotate(195deg);
+  -o-transform: rotate(195deg);
+  width: 15%;
+}
+.k2__left {
+  position: absolute;
+  left: -10%;
+  top: -11%;
+}
+.l2__right {
+  position: absolute;
+  right: 5%;
+  top: 0%;
+  width: 16%;
+}
+
+/* media */
+
+@media (max-width: 1360px) {
+  .menu__weeks, .menu__list {
+    margin-bottom: 3em;
+    gap: 30px;
+    justify-content: center;
+}
+.nav {
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+}
+@media (max-width: 1110px) {
+  .nav {
+    width: 100%;
+  }
+  .k1__left {
+    left: -7%;
+}
+.k1__legttop {
+  top: 11%;
+  width: 22%;
+}
+.k2__left {
+  top: 0%;
+  width: 25%;
+}
+}
+@media (max-width: 1025px) {
+  .menu__weeks, .menu__list {
+    margin-bottom: 3em;
+    gap: 30px;
+    justify-content: center;
+}
+}
+@media (max-width: 500px) {
+  .menu__weeks, .menu__list {
+    justify-content: space-evenly;
+}
+.gred {
+  display: flex;
+  width: auto;
+  height: 100%;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 5vh 0;
+  min-height: 50em;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.menu__product-list> li {
+  width: 170px;
+}
+.card {
+  gap: 10px;
+  min-height: 210px;
+}
+.card__text > p{
+  width: inherit;
+    height: fit-content;
+}
+.k1__left {
+  left: -15%;
+  width: 52%;
+  z-index: -1;
+}
+.k1__legttop {
+  top: 26%;
+  width: 50%;
+  left: -25%;
+}
+.l2__right {
+  position: absolute;
+  right: -1%;
+  top: 0%;
+  width: 50%;
+  z-index: -1;
+}
+.k1__right {
+  position: absolute;
+  right: -5%;
+  bottom: 14%;
+  transform: rotate(195deg);
+  -webkit-transform: rotate(195deg);
+  -moz-transform: rotate(195deg);
+  -ms-transform: rotate(195deg);
+  -o-transform: rotate(195deg);
+  width: 23%;
+}
+}
+
+@media (max-width: 400px) {
+
+  .menu__product-list> li {
+    width: 7em;
+  }
+
+}
