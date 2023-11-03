@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/style.css">
-    <link rel="stylesheet" href="./dist/menu.css">
+    <link rel="stylesheet" href="./menu/menu.css">
     <title>Menu</title>
 </head>
 
 <body>
+
+
     <header class="header" id="home">
         <div class="navs">
             <div class="container">
@@ -175,61 +177,74 @@
     <main class="menu">
         <div class="menu__wrap">
             <div class="container">
-                <!-- филтер по неделям -->
-                <ul class="menu__weeks">
-                    <li class="menu__week-item">
-                        <button type="button" class="weekDey" id="week1">
-                            1 неделя
-                        </button>
-                    </li>
-                    <li class="menu__week-item" >
-                        <button type="button" class="weekDey" id="week2">
-                            2 неделя
-                        </button>
-                    </li>
-                    <li class="menu__week-item" >
-                        <button type="button" class="weekDey" id="week3">
-                            3 неделя
-                        </button>
-                    </li>
-                </ul>
-                <!-- филтер по неделям -->
-                <!-- фильтр по категориям -->
-                <ul class="menu__list">
-                    <li class="menu__list-item" >
-                        <button type="button" class="categoryBtn" data-category="SaladsAndSnacks" id="SaladsAndSnacks">Салаты</button>
-                    </li>
-                    <li class="menu__list-item">
-                        <button type="button" class="categoryBtn" data-category="Soups" id="Soups">Супы</button>
-                    </li>
-                    <li class="menu__list-item" >
-                        <button type="button" class="categoryBtn" data-category="HotAppetizers" id="HotAppetizers">Вторые блюда</button>
-                    </li>
-                    <li class="menu__list-item" >
-                        <button type="button" class="categoryBtn" data-category="
-                        MeatPoultry" id="MeatPoultry">Мясо / птица</button>
-                    </li>
-                    <li class="menu__list-item" >
-                        <button type="button" class="categoryBtn" data-category="FishSeafood" id="FishSeafood">Рыба / морепродукты</button>
-                    </li>
-                    <li class="menu__list-item" >
-                        <button type="button" class="categoryBtn" data-category="PastaRisotto" id="PastaRisotto">Паста / ризотто</button>
-                    </li>
-                    <li class="menu__list-item" >
-                        <button type="button" class="categoryBtn" data-category="SideDishes" id="SideDishes">Гарниры</button>
-                    </li>
-                </ul>
-                <!-- фильтр по категориям -->
-                <!-- карточка продуста -->
-                <div class="menu__product">
-                    <div class="menu__product-wrap">
-                        <ul class="menu__product-list gred" data-week="one" data-category="">
-                        </ul>
+
+                <div class="menu__title">
+                    <h2 class="menu__title-text">ДОСТАВКА КОМПЛЕКСНЫХ ОБЕДОВ НА ПРЕДПРИЯТИЯ</h2>
+                    <p class="menu__title-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur ipsam in obcaecati illum. Modi repellat iure porro asperiores quod dolore esse quas quasi ullam sequi, voluptatibus at nisi quaerat.</p>
+                    <a href="#constructor" class="menu__title-btn btn">
+                        Ознакомится с компликсами
+                    </a>
+                </div>
+                
+                <div class="menu__advantages">
+                    <div class="menu__grid">
+                        <div class="menu__grid-item menu__item-1"></div>
+                        <div class="menu__grid-item menu__item-2"></div>
+                        <div class="menu__grid-item menu__item-3"></div>
+                        <div class="menu__grid-item menu__item-4"></div>
+                        <div class="menu__grid-item menu__item-5"></div>
                     </div>
                 </div>
-                <!-- карточка продуста -->
+
+                <div class="menu__constructor">
+                    <h2 class="menu__constructor-title">
+                        ВЫБЕРИТЕ ПОДХОДЯЩИЙ РАЦИОН
+                    </h2>
+                    <div class="menu__constructor-function">
+                        <ul class="menu__constructor-function-title">
+                            <li><button type="button" class="menu__constructor-function-textBtn active" id="1">1 неделя</button></li>
+                            <li><button type="button" class="menu__constructor-function-textBtn " id="2">2 неделя</button></li>
+                            <li><button type="button" class="menu__constructor-function-textBtn" id="3">3 неделя</button></li>
+                        </ul>
+
+                        <ul class="menu__constructor-function-menu" id="constructor">
+                            <li class="menu__constructor-function-week1 weeks" id="week-1">
+                                <div class="menu__constructor-function-card card">
+                                    <img src="" alt="" class="card__img">
+                                    <div class="card__text">      
+
+                                    </div>
+                                </div>
+                                <div class="menu__constructor-function-card card">
+                                    <img src="" alt="" class="card__img">
+                                    <div class="card__text">
+
+                                    </div>
+                                </div>
+                                <div class="menu__constructor-function-card card">
+                                    <img src="" alt="" class="card__img">
+                                    <div class="card__text">
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu__constructor-function-week2 weeks opasiti" id="week-2">
+                                <div class="menu__constructor-function-card"></div>
+                                <div class="menu__constructor-function-card"></div>
+                                <div class="menu__constructor-function-card"></div>
+                            </li>
+                            <li class="menu__constructor-function-week3 weeks opasiti" id="week-3">
+                                <div class="menu__constructor-function-card"></div>
+                                <div class="menu__constructor-function-card"></div>
+                                <div class="menu__constructor-function-card"></div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
 
             </div>
+
             <img src="./assets/img/k-1.png" class="k1__left" alt="">
             <img src="./assets/img/k-1.png" class="k1__right" alt="">
             <img src="./assets/img/k-2.png" class="k2__left" alt="">
@@ -241,6 +256,11 @@
 
 
     <footer class="footer" id="footer">
+            <!-- <span class="btnTop none" id="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z" clip-rule="evenodd" />
+          </svg>          
+    </span> -->
         <div class="container">
             <div class="footer__wrap">
                 <img src="./assets/img/k-1.png" class="k1__bottomright" alt="">
@@ -305,8 +325,10 @@
         </div>
     </footer>
 
+    <script src="./menu/menu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="dist/form.js"></script>
 
-    <script src="./dist/menu.js"></script>
 </body>
 
 </html>
